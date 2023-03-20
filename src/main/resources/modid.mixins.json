@@ -1,12 +1,18 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "net.fabricmc.example.mixin",
+  "package": "org.unmojang.drasltweaks.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
   ],
   "client": [
-    "ExampleMixin"
+    "YggdrasilMinecraftSessionServiceMixin",
+    "YggdrasilAuthenticationServiceMixin",
+    "YggdrasilServicesKeyInfoMixin"
+  ],
+  "server": [
+    "YggdrasilServicesKeyInfoMixin",
+    "YggdrasilAuthenticationServiceMixin"
   ],
   "injectors": {
     "defaultRequire": 1
